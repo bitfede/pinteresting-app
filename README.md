@@ -1,5 +1,5 @@
-# One Month Rails
+# My First Rails app!
 
-This is the pinteresting sample application!
+This is a pinteresting-like sample application!
 
 by [Federico de Faveri]
