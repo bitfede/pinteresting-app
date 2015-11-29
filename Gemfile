@@ -21,6 +21,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 # Use Devise to get users in my app
 gem 'devise', '~> 3.5.2'
+#paperclip gem!
+gem 'paperclip', github:'thoughtbot/paperclip'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
