@@ -79,5 +79,17 @@ Rails.application.configure do
 
   #required for Heroku
   config.action_mailer.default_url_options = { :host =>'federico-pinteresting.herokuapp.com' }
+  
+  # config/environments/production.rb
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_region => ' US Standard',
+  :s3_credentials => {
+  :bucket => ENV['S3_BUCKET_NAME'],
+  :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
+
 
 end
