@@ -2,17 +2,16 @@
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
       <div class ="panel-heading">
-        Posted by: <%= pin.user.email if pin.user %> 
+        Posted by: <strong><%= pin.user.email if pin.user %></strong>
       </div>
-      <%= image_tag pin.image.url (:thumb) %>
+      <%= link_to image_tag(pin.image.url (:medium)), pin_path(pin) %>
       <div class ="panel-heading">
-        <%= pin.description %> 
+        <%= pin.description %> <br>
       </div>
       <div class="panel-body">
-        <%= link_to 'Show', pin_path(pin) %>
         <% if pin.user == current_user %>
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to raw('<span class="glyphicon glyphicon-edit"></span> Edit'), edit_pin_path(pin), class: "btn btn-default" %>
+          <%= link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), pin, method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure?' } %>
         <% end %>
       </div>
     </div>
