@@ -24,7 +24,7 @@ gem 'devise', '~> 3.5.2'
 #paperclip gem!
 gem 'paperclip', github:'thoughtbot/paperclip'
 #aws toolkit sdk
-gem 'aws-sdk-v1'
+gem 'aws-sdk'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
