@@ -11,7 +11,7 @@
         <%= pin.description %> <br>
       </div>
       <div class="panel-body">
-        <% if pin.user == current_user %>
+        <% if current_user && (pin.user == current_user) %>
           <%= link_to raw('<span class="glyphicon glyphicon-edit"></span> Edit'), edit_pin_path(pin), class: "btn btn-default" %>
           <%= link_to raw('<span class="glyphicon glyphicon-trash"></span> Delete'), pin, method: :delete, class: "btn btn-default" , data: { confirm: 'Are you sure?' } %>
         <% end %>
